@@ -453,4 +453,12 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(s => observer.observe(s));
 </script>
 </body>
-</html>
+</html><style id="fix-short-dish-blocks">
+/* Compact rows: the image and its card must shrink together */
+.dish{height:112px;min-height:112px;max-height:112px;overflow:hidden}
+.dish-photo{height:112px;min-height:112px;max-height:112px;width:118px;object-fit:cover}
+@media(max-width:520px){
+ .dish{height:88px;min-height:88px;max-height:88px}
+ .dish-photo{height:88px;min-height:88px;max-height:88px;width:82px;flex-basis:82px}
+}
+</style>
