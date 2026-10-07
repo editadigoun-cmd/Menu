@@ -111,6 +111,19 @@ h1 em {font-style:normal;color:var(--orange)}
   .price {font-size:14px}
   .footer-inner {align-items:flex-start}
 }
+
+.dish{padding:0;overflow:hidden;min-height:92px;align-items:stretch}
+.dish-photo{width:118px;flex:0 0 118px;object-fit:cover;display:block;background:#eadbca}
+.dish-body{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 17px;flex:1;min-width:0}
+.dish-name{min-width:0}
+.dish-name span:last-child{overflow-wrap:anywhere}
+@media(max-width:520px){
+  .dish{min-height:82px;border-radius:16px}
+  .dish-photo{width:92px;flex-basis:92px}
+  .dish-body{padding:12px 11px;gap:9px}
+  .price{font-size:13px}
+}
+
 </style>
 </head>
 <body>
@@ -149,7 +162,7 @@ h1 em {font-style:normal;color:var(--orange)}
   <div class="menu-intro">
     <div class="kicker">Notre sélection</div>
     <h2>🥘 Nos plats</h2>
-    <p>Une carte pensée pour les amoureux de bonne cuisine. Parcourez les plats, comparez les formules et trouvez votre envie du moment.</p>
+    <p>Une carte pensée pour les amoureux de bonne cuisine. Parcourez les plats, visualisez les spécialités et trouvez votre envie du moment.</p>
     <div class="search">
       <span>⌕</span>
       <input id="search" type="search" placeholder="Rechercher un plat, un poulet, un tilapia…" aria-label="Rechercher un plat">
@@ -166,38 +179,30 @@ h1 em {font-style:normal;color:var(--orange)}
           <h2>Nos plats</h2>
         </div>
       </div>
-      <div class="dishes"><article class="dish" data-search="🍚 atiéké + poisson silvie">
-            <div class="dish-name"><span class="dot"></span><span>🍚 Atiéké + Poisson Silvie</span></div>
+      <div class="dishes"><article class="dish" data-search="🍚 atiéké + poisson silvie"><img class="dish-photo" src="https://static.wixstatic.com/media/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg/v1/fill/w_1000%2Ch_667%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg" alt="🍚 atiéké + poisson silvie" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>🍚 Atiéké + Poisson Silvie</span></div>
             <div class="price">2 000 F</div>
-        </article>
-<article class="dish" data-search="atiéké + poisson silivi">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Poisson Silivi</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + poisson silivi"><img class="dish-photo" src="https://static.wixstatic.com/media/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg/v1/fill/w_1000%2Ch_667%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg" alt="atiéké + poisson silivi" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Poisson Silivi</span></div>
             <div class="price">3 000 F / 4 500 F</div>
-        </article>
-<article class="dish" data-search="atiéké + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Aileron</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + aileron"><img class="dish-photo" src="https://static.wixstatic.com/media/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg/v1/fill/w_1000%2Ch_667%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg" alt="atiéké + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="atiéké + poulet (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Poulet (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + poulet (moitié)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="atiéké + poulet (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Poulet (moitié)</span></div>
             <div class="price">3 500 F</div>
-        </article>
-<article class="dish" data-search="atiéké + poulet (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Poulet (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + poulet (complet)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="atiéké + poulet (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Poulet (complet)</span></div>
             <div class="price">6 000 F</div>
-        </article>
-<article class="dish" data-search="atiéké + tilapia">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Tilapia</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + tilapia"><img class="dish-photo" src="https://www.cuisinedecheznous.net/_next/image/?q=75&url=https%3A%2F%2Fwww.cuisinedecheznous.net%2Fwp-content%2Fuploads%2Fsites%2F7%2F2026%2F02%2F1771232987755-recipe-9596-hd.jpg&w=1920" alt="atiéké + tilapia" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Tilapia</span></div>
             <div class="price">6 000 F / 7 000 F / 8 000 F</div>
-        </article>
-<article class="dish" data-search="atiéké + lapin complet">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Lapin complet</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + lapin complet"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="atiéké + lapin complet" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Lapin complet</span></div>
             <div class="price">8 000 F / 9 000 F</div>
-        </article>
-<article class="dish" data-search="atiéké + demi lapin">
-            <div class="dish-name"><span class="dot"></span><span>Atiéké + Demi lapin</span></div>
+        </div></article>
+<article class="dish" data-search="atiéké + demi lapin"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="atiéké + demi lapin" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Atiéké + Demi lapin</span></div>
             <div class="price">4 500 F / 5 000 F</div>
-        </article></div>
+        </div></article></div>
     </section>
     <section id="sec-1" class="menu-section " data-section="🍲 Akassa">
       <div class="section-heading">
@@ -207,30 +212,24 @@ h1 em {font-style:normal;color:var(--orange)}
           <h2>Akassa</h2>
         </div>
       </div>
-      <div class="dishes"><article class="dish" data-search="akassa + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Akassa + Aileron</span></div>
+      <div class="dishes"><article class="dish" data-search="akassa + aileron"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="akassa + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Akassa + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="akassa + poisson silivi (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Akassa + Poisson Silivi (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="akassa + poisson silivi (moitié)"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="akassa + poisson silivi (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Akassa + Poisson Silivi (moitié)</span></div>
             <div class="price">3 000 F</div>
-        </article>
-<article class="dish" data-search="akassa + poisson silivi (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Akassa + Poisson Silivi (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="akassa + poisson silivi (complet)"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="akassa + poisson silivi (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Akassa + Poisson Silivi (complet)</span></div>
             <div class="price">4 500 F</div>
-        </article>
-<article class="dish" data-search="akassa + tilapia">
-            <div class="dish-name"><span class="dot"></span><span>Akassa + Tilapia</span></div>
+        </div></article>
+<article class="dish" data-search="akassa + tilapia"><img class="dish-photo" src="https://www.cuisinedecheznous.net/_next/image/?q=75&url=https%3A%2F%2Fwww.cuisinedecheznous.net%2Fwp-content%2Fuploads%2Fsites%2F7%2F2026%2F02%2F1771232987755-recipe-9596-hd.jpg&w=1920" alt="akassa + tilapia" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Akassa + Tilapia</span></div>
             <div class="price">6 000 F / 7 000 F / 8 000 F / 9 000 F</div>
-        </article>
-<article class="dish" data-search="akassa + lapin complet">
-            <div class="dish-name"><span class="dot"></span><span>Akassa + Lapin complet</span></div>
+        </div></article>
+<article class="dish" data-search="akassa + lapin complet"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="akassa + lapin complet" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Akassa + Lapin complet</span></div>
             <div class="price">8 000 F / 9 000 F</div>
-        </article>
-<article class="dish" data-search="akassa + demi lapin">
-            <div class="dish-name"><span class="dot"></span><span>Akassa + Demi lapin</span></div>
+        </div></article>
+<article class="dish" data-search="akassa + demi lapin"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="akassa + demi lapin" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Akassa + Demi lapin</span></div>
             <div class="price">4 500 F / 5 000 F</div>
-        </article></div>
+        </div></article></div>
     </section>
     <section id="sec-2" class="menu-section " data-section="🍗 Piron">
       <div class="section-heading">
@@ -240,34 +239,27 @@ h1 em {font-style:normal;color:var(--orange)}
           <h2>Piron</h2>
         </div>
       </div>
-      <div class="dishes"><article class="dish" data-search="piron + poisson silivi (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Poisson Silivi (moitié)</span></div>
+      <div class="dishes"><article class="dish" data-search="piron + poisson silivi (moitié)"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="piron + poisson silivi (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Poisson Silivi (moitié)</span></div>
             <div class="price">3 000 F</div>
-        </article>
-<article class="dish" data-search="piron + poisson silivi (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Poisson Silivi (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="piron + poisson silivi (complet)"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="piron + poisson silivi (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Poisson Silivi (complet)</span></div>
             <div class="price">4 500 F</div>
-        </article>
-<article class="dish" data-search="piron + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Aileron</span></div>
+        </div></article>
+<article class="dish" data-search="piron + aileron"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="piron + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="piron + poulet (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Poulet (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="piron + poulet (moitié)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="piron + poulet (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Poulet (moitié)</span></div>
             <div class="price">3 500 F</div>
-        </article>
-<article class="dish" data-search="piron + poulet (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Poulet (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="piron + poulet (complet)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="piron + poulet (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Poulet (complet)</span></div>
             <div class="price">6 000 F</div>
-        </article>
-<article class="dish" data-search="piron + lapin complet">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Lapin complet</span></div>
+        </div></article>
+<article class="dish" data-search="piron + lapin complet"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="piron + lapin complet" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Lapin complet</span></div>
             <div class="price">8 000 F / 9 000 F</div>
-        </article>
-<article class="dish" data-search="piron + demi lapin">
-            <div class="dish-name"><span class="dot"></span><span>Piron + Demi lapin</span></div>
+        </div></article>
+<article class="dish" data-search="piron + demi lapin"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="piron + demi lapin" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Piron + Demi lapin</span></div>
             <div class="price">4 500 F / 5 000 F</div>
-        </article></div>
+        </div></article></div>
     </section>
     <section id="sec-3" class="menu-section " data-section="🍝 Pâte rouge">
       <div class="section-heading">
@@ -277,34 +269,27 @@ h1 em {font-style:normal;color:var(--orange)}
           <h2>Pâte rouge</h2>
         </div>
       </div>
-      <div class="dishes"><article class="dish" data-search="pâte rouge + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Aileron</span></div>
+      <div class="dishes"><article class="dish" data-search="pâte rouge + aileron"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="pâte rouge + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="pâte rouge + poisson silivi (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poisson Silivi (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="pâte rouge + poisson silivi (moitié)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="pâte rouge + poisson silivi (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poisson Silivi (moitié)</span></div>
             <div class="price">3 000 F</div>
-        </article>
-<article class="dish" data-search="pâte rouge + poisson silivi (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poisson Silivi (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="pâte rouge + poisson silivi (complet)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="pâte rouge + poisson silivi (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poisson Silivi (complet)</span></div>
             <div class="price">4 500 F</div>
-        </article>
-<article class="dish" data-search="pâte rouge + poulet (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poulet (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="pâte rouge + poulet (moitié)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="pâte rouge + poulet (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poulet (moitié)</span></div>
             <div class="price">3 500 F</div>
-        </article>
-<article class="dish" data-search="pâte rouge + poulet (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poulet (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="pâte rouge + poulet (complet)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="pâte rouge + poulet (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poulet (complet)</span></div>
             <div class="price">6 000 F</div>
-        </article>
-<article class="dish" data-search="pâte rouge + lapin complet">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Lapin complet</span></div>
+        </div></article>
+<article class="dish" data-search="pâte rouge + lapin complet"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="pâte rouge + lapin complet" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Lapin complet</span></div>
             <div class="price">8 000 F / 9 000 F</div>
-        </article>
-<article class="dish" data-search="pâte rouge + demi lapin">
-            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Demi lapin</span></div>
+        </div></article>
+<article class="dish" data-search="pâte rouge + demi lapin"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="pâte rouge + demi lapin" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Pâte rouge + Demi lapin</span></div>
             <div class="price">4 500 F / 5 000 F</div>
-        </article></div>
+        </div></article></div>
     </section>
     <section id="sec-4" class="menu-section " data-section="🍚 Riz">
       <div class="section-heading">
@@ -314,38 +299,30 @@ h1 em {font-style:normal;color:var(--orange)}
           <h2>Riz</h2>
         </div>
       </div>
-      <div class="dishes"><article class="dish" data-search="riz + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Aileron</span></div>
+      <div class="dishes"><article class="dish" data-search="riz + aileron"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="riz + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="riz + poisson silivi (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Poisson Silivi (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="riz + poisson silivi (moitié)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="riz + poisson silivi (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Poisson Silivi (moitié)</span></div>
             <div class="price">3 000 F</div>
-        </article>
-<article class="dish" data-search="riz + poisson silivi (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Poisson Silivi (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="riz + poisson silivi (complet)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="riz + poisson silivi (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Poisson Silivi (complet)</span></div>
             <div class="price">4 500 F</div>
-        </article>
-<article class="dish" data-search="riz + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Aileron</span></div>
+        </div></article>
+<article class="dish" data-search="riz + aileron"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="riz + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="riz + poulet (moitié)">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Poulet (moitié)</span></div>
+        </div></article>
+<article class="dish" data-search="riz + poulet (moitié)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="riz + poulet (moitié)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Poulet (moitié)</span></div>
             <div class="price">3 500 F</div>
-        </article>
-<article class="dish" data-search="riz + poulet (complet)">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Poulet (complet)</span></div>
+        </div></article>
+<article class="dish" data-search="riz + poulet (complet)"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="riz + poulet (complet)" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Poulet (complet)</span></div>
             <div class="price">6 000 F</div>
-        </article>
-<article class="dish" data-search="riz + lapin complet">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Lapin complet</span></div>
+        </div></article>
+<article class="dish" data-search="riz + lapin complet"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="riz + lapin complet" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Lapin complet</span></div>
             <div class="price">8 000 F / 9 000 F</div>
-        </article>
-<article class="dish" data-search="riz + demi lapin">
-            <div class="dish-name"><span class="dot"></span><span>Riz + Demi lapin</span></div>
+        </div></article>
+<article class="dish" data-search="riz + demi lapin"><img class="dish-photo" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/68/bf/lapin-braise-avec-pommes.jpg" alt="riz + demi lapin" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Riz + Demi lapin</span></div>
             <div class="price">4 500 F / 5 000 F</div>
-        </article></div>
+        </div></article></div>
     </section>
     <section id="sec-5" class="menu-section " data-section="🍟 Accompagnements">
       <div class="section-heading">
@@ -355,34 +332,27 @@ h1 em {font-style:normal;color:var(--orange)}
           <h2>Accompagnements</h2>
         </div>
       </div>
-      <div class="dishes"><article class="dish" data-search="frite + aileron">
-            <div class="dish-name"><span class="dot"></span><span>Frite + Aileron</span></div>
+      <div class="dishes"><article class="dish" data-search="frite + aileron"><img class="dish-photo" src="https://static-content.owner.com/funnel/images/c993cdbe-a739-414f-a97b-673fb4e9f678.jpg?v=0605853080" alt="frite + aileron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Frite + Aileron</span></div>
             <div class="price">4 000 F</div>
-        </article>
-<article class="dish" data-search="portion atiéké">
-            <div class="dish-name"><span class="dot"></span><span>Portion Atiéké</span></div>
+        </div></article>
+<article class="dish" data-search="portion atiéké"><img class="dish-photo" src="https://static.wixstatic.com/media/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg/v1/fill/w_1000%2Ch_667%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01/504b32_8e38f8706bcb4093889d44878db57dc7~mv2.jpg" alt="portion atiéké" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Portion Atiéké</span></div>
             <div class="price">500 F</div>
-        </article>
-<article class="dish" data-search="portion aloko">
-            <div class="dish-name"><span class="dot"></span><span>Portion Aloko</span></div>
+        </div></article>
+<article class="dish" data-search="portion aloko"><img class="dish-photo" src="https://images.squarespace-cdn.com/content/v1/614f831e90f08045038b4dae/6576fb4f-c96f-4090-b30c-e5181cf1c650/117868140_10158584920037378_4692407896224792253_n.jpg?format=750w" alt="portion aloko" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Portion Aloko</span></div>
             <div class="price">500 F</div>
-        </article>
-<article class="dish" data-search="portion piron">
-            <div class="dish-name"><span class="dot"></span><span>Portion Piron</span></div>
+        </div></article>
+<article class="dish" data-search="portion piron"><img class="dish-photo" src="https://fkcydzchtwtckedmrxrs.supabase.co/storage/v1/object/public/recipe-photos/benin/akassa.jpg" alt="portion piron" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Portion Piron</span></div>
             <div class="price">1 000 F</div>
-        </article>
-<article class="dish" data-search="portion pâte rouge">
-            <div class="dish-name"><span class="dot"></span><span>Portion Pâte rouge</span></div>
+        </div></article>
+<article class="dish" data-search="portion pâte rouge"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="portion pâte rouge" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Portion Pâte rouge</span></div>
             <div class="price">1 000 F</div>
-        </article>
-<article class="dish" data-search="portion frite">
-            <div class="dish-name"><span class="dot"></span><span>Portion Frite</span></div>
+        </div></article>
+<article class="dish" data-search="portion frite"><img class="dish-photo" src="https://static-content.owner.com/funnel/images/c993cdbe-a739-414f-a97b-673fb4e9f678.jpg?v=0605853080" alt="portion frite" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Portion Frite</span></div>
             <div class="price">1 000 F</div>
-        </article>
-<article class="dish" data-search="portion riz">
-            <div class="dish-name"><span class="dot"></span><span>Portion Riz</span></div>
+        </div></article>
+<article class="dish" data-search="portion riz"><img class="dish-photo" src="https://cdn.aistoucuisine.com/assets/31fb1e01-07cc-4eaf-80fb-aa747b1802ab/attie-ke-poulet-2.webp?format=webp&quality=75&width=1536" alt="portion riz" loading="lazy" referrerpolicy="no-referrer"><div class="dish-body"><div class="dish-name"><span class="dot"></span><span>Portion Riz</span></div>
             <div class="price">1 000 F</div>
-        </article></div>
+        </div></article></div>
     </section>
     <div id="empty" class="empty">Aucun plat ne correspond à votre recherche.</div>
   </div>
