@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d96b1f">
+<meta name="description" content="Menu de notre restaurant — plats béninois, grillades et accompagnements.">
+<title>Notre Menu — Saveurs & Tradition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange:#d96b1f;
+  --orange-2:#f08b3b;
+  --cream:#fff8ef;
+  --cream-2:#fffdf9;
+  --ink:#241d17;
+  --muted:#7e7064;
+  --line:#eadbca;
+  --green:#193c31;
+  --shadow:0 18px 55px rgba(75,42,18,.10);
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0; color:var(--ink); background:var(--cream);
+  font-family:"DM Sans",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+body:before {
+  content:""; position:fixed; inset:0; pointer-events:none; opacity:.22;
+  background-image:radial-gradient(#cda77d 0.55px,transparent .55px);
+  background-size:9px 9px; mask-image:linear-gradient(to bottom,#000,transparent 70%);
+}
+a {color:inherit;text-decoration:none}
+.hero {
+  min-height:510px; position:relative; overflow:hidden; display:flex; align-items:center;
+  background:
+    radial-gradient(circle at 83% 25%, rgba(255,178,100,.22), transparent 28%),
+    linear-gradient(135deg,#fff8ef 0%,#fff1df 52%,#f6ddc3 100%);
+}
+.hero:after {
+  content:""; position:absolute; width:520px;height:520px;border-radius:50%;
+  right:-170px;top:-180px;border:1px solid rgba(217,107,31,.18);
+  box-shadow:0 0 0 38px rgba(217,107,31,.035),0 0 0 78px rgba(217,107,31,.025);
+}
+.hero-inner {width:min(1160px,92%);margin:auto;position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.brand {display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.brand img {width:74px;height:74px;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(84,44,13,.12));background:white;border-radius:50%;padding:5px}
+.brand span {font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--orange);text-transform:uppercase}
+h1 {font-family:"Playfair Display",Georgia,serif;font-size:clamp(48px,7vw,82px);line-height:.92;margin:0 0 20px;letter-spacing:-.045em}
+h1 em {font-style:normal;color:var(--orange)}
+.hero-copy p {font-size:18px;line-height:1.65;color:var(--muted);max-width:570px;margin:0 0 28px}
+.badges {display:flex;flex-wrap:wrap;gap:10px}
+.badge {padding:10px 14px;border:1px solid rgba(217,107,31,.22);background:rgba(255,255,255,.62);border-radius:999px;font-size:13px;font-weight:700}
+.hero-card {justify-self:end;width:min(360px,100%);background:rgba(255,255,255,.76);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:30px;padding:34px;box-shadow:var(--shadow);transform:rotate(2deg)}
+.hero-card .mini {font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--orange)}
+.hero-card h3 {font-family:"Playfair Display",serif;font-size:31px;margin:8px 0 12px}
+.hero-card p {color:var(--muted);line-height:1.6;margin:0}
+.flame {font-size:50px;margin-bottom:10px}
+.nav {position:sticky;top:0;z-index:20;background:rgba(255,248,239,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(234,219,202,.8)}
+.nav-inner {width:min(1160px,92%);margin:auto;display:flex;align-items:center;gap:10px;overflow:auto;padding:13px 0;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar {display:none}
+.nav a {white-space:nowrap;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:700;color:var(--muted);transition:.2s}
+.nav a:hover,.nav a.active {background:var(--orange);color:#fff}
+.menu-wrap {width:min(1040px,92%);margin:0 auto;padding:74px 0 90px}
+.menu-intro {text-align:center;max-width:680px;margin:0 auto 54px}
+.menu-intro .kicker {color:var(--orange);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.menu-intro h2 {font-family:"Playfair Display",serif;font-size:48px;line-height:1.05;margin:9px 0 14px}
+.menu-intro p {color:var(--muted);line-height:1.7;margin:0}
+.search {max-width:620px;margin:26px auto 0;position:relative}
+.search input {width:100%;padding:17px 20px 17px 48px;border-radius:16px;border:1px solid var(--line);background:#fff;outline:none;font:inherit;box-shadow:0 8px 25px rgba(70,42,20,.05)}
+.search span {position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:19px}
+.menu-section {margin-bottom:72px;scroll-margin-top:90px}
+.section-heading {display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.section-icon {width:54px;height:54px;border-radius:17px;background:var(--green);display:grid;place-items:center;font-size:26px;box-shadow:0 10px 22px rgba(25,60,49,.15)}
+.eyebrow {margin:0 0 2px;color:var(--orange);font-size:10px;font-weight:800;letter-spacing:.2em}
+.section-heading h2 {font-family:"Playfair Display",serif;font-size:32px;margin:0}
+.dishes {display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dish {background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:17px;padding:17px 19px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.dish:hover {transform:translateY(-2px);border-color:#dfb98f;box-shadow:0 12px 25px rgba(70,42,20,.08)}
+.dish-name {display:flex;align-items:flex-start;gap:10px;font-weight:600;line-height:1.35}
+.dot {width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:var(--orange);margin-top:7px}
+.price {font-weight:800;color:var(--orange);white-space:nowrap;text-align:right}
+.featured .section-icon {background:var(--orange)}
+.note {margin-top:18px;color:var(--muted);font-size:12px}
+.footer {background:var(--green);color:#fff;padding:45px 0}
+.footer-inner {width:min(1040px,92%);margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer img {width:58px;height:58px;background:white;border-radius:50%;padding:4px}
+.footer h3 {font-family:"Playfair Display",serif;font-size:26px;margin:0 0 5px}
+.footer p {margin:0;color:rgba(255,255,255,.72);font-size:13px}
+.top {width:44px;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;font-size:18px}
+.empty {display:none;text-align:center;color:var(--muted);padding:35px}
+@media (max-width:800px) {
+  .hero {min-height:auto;padding:52px 0 65px}
+  .hero-inner {grid-template-columns:1fr}
+  .hero-card {justify-self:start;transform:none;max-width:430px}
+  .hero:after {width:330px;height:330px;right:-180px;top:-100px}
+  .menu-wrap {padding-top:55px}
+  .dishes {grid-template-columns:1fr}
+}
+@media (max-width:520px) {
+  .brand img {width:60px;height:60px}
+  h1 {font-size:52px}
+  .hero-copy p {font-size:16px}
+  .hero-card {padding:25px}
+  .menu-intro h2 {font-size:39px}
+  .section-heading h2 {font-size:27px}
+  .dish {padding:15px 14px}
+  .price {font-size:14px}
+  .footer-inner {align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="brand">
+        <img src="data:image/webp;base64,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" alt="Logo">
+        <span>Notre cuisine · Notre passion</span>
+      </div>
+      <h1>Le goût de la<br><em>tradition.</em></h1>
+      <p>Découvrez notre carte et laissez-vous tenter par une cuisine généreuse, authentique et pleine de saveurs.</p>
+      <div class="badges">
+        <span class="badge">🔥 Fait avec passion</span>
+        <span class="badge">🍽️ Portions généreuses</span>
+        <span class="badge">🇧🇯 Saveurs locales</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="flame">🥘</div>
+      <div class="mini">LA CARTE</div>
+      <h3>Des recettes qui donnent envie de revenir.</h3>
+      <p>Atiéké, Akassa, Piron, pâte rouge, riz et accompagnements : choisissez votre combinaison préférée.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top">Accueil</a>
+    <a href="#sec-0">🥘 Nos plats</a><a href="#sec-1">🍲 Akassa</a><a href="#sec-2">🍗 Piron</a><a href="#sec-3">🍝 Pâte rouge</a><a href="#sec-4">🍚 Riz</a><a href="#sec-5">🍟 Accompagnements</a>
+  </div>
+</nav>
+
+<main id="top" class="menu-wrap">
+  <div class="menu-intro">
+    <div class="kicker">Notre sélection</div>
+    <h2>🥘 Nos plats</h2>
+    <p>Une carte pensée pour les amoureux de bonne cuisine. Parcourez les plats, comparez les formules et trouvez votre envie du moment.</p>
+    <div class="search">
+      <span>⌕</span>
+      <input id="search" type="search" placeholder="Rechercher un plat, un poulet, un tilapia…" aria-label="Rechercher un plat">
+    </div>
+  </div>
+
+  <div id="menu">
+    
+    <section id="sec-0" class="menu-section featured" data-section="🥘 Nos plats">
+      <div class="section-heading">
+        <div class="section-icon">🥘</div>
+        <div>
+          <p class="eyebrow">À LA CARTE</p>
+          <h2>Nos plats</h2>
+        </div>
+      </div>
+      <div class="dishes"><article class="dish" data-search="🍚 atiéké + poisson silvie">
+            <div class="dish-name"><span class="dot"></span><span>🍚 Atiéké + Poisson Silvie</span></div>
+            <div class="price">2 000 F</div>
+        </article>
+<article class="dish" data-search="atiéké + poisson silivi">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Poisson Silivi</span></div>
+            <div class="price">3 000 F / 4 500 F</div>
+        </article>
+<article class="dish" data-search="atiéké + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="atiéké + poulet (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Poulet (moitié)</span></div>
+            <div class="price">3 500 F</div>
+        </article>
+<article class="dish" data-search="atiéké + poulet (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Poulet (complet)</span></div>
+            <div class="price">6 000 F</div>
+        </article>
+<article class="dish" data-search="atiéké + tilapia">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Tilapia</span></div>
+            <div class="price">6 000 F / 7 000 F / 8 000 F</div>
+        </article>
+<article class="dish" data-search="atiéké + lapin complet">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Lapin complet</span></div>
+            <div class="price">8 000 F / 9 000 F</div>
+        </article>
+<article class="dish" data-search="atiéké + demi lapin">
+            <div class="dish-name"><span class="dot"></span><span>Atiéké + Demi lapin</span></div>
+            <div class="price">4 500 F / 5 000 F</div>
+        </article></div>
+    </section>
+    <section id="sec-1" class="menu-section " data-section="🍲 Akassa">
+      <div class="section-heading">
+        <div class="section-icon">🍲</div>
+        <div>
+          <p class="eyebrow">À LA CARTE</p>
+          <h2>Akassa</h2>
+        </div>
+      </div>
+      <div class="dishes"><article class="dish" data-search="akassa + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Akassa + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="akassa + poisson silivi (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Akassa + Poisson Silivi (moitié)</span></div>
+            <div class="price">3 000 F</div>
+        </article>
+<article class="dish" data-search="akassa + poisson silivi (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Akassa + Poisson Silivi (complet)</span></div>
+            <div class="price">4 500 F</div>
+        </article>
+<article class="dish" data-search="akassa + tilapia">
+            <div class="dish-name"><span class="dot"></span><span>Akassa + Tilapia</span></div>
+            <div class="price">6 000 F / 7 000 F / 8 000 F / 9 000 F</div>
+        </article>
+<article class="dish" data-search="akassa + lapin complet">
+            <div class="dish-name"><span class="dot"></span><span>Akassa + Lapin complet</span></div>
+            <div class="price">8 000 F / 9 000 F</div>
+        </article>
+<article class="dish" data-search="akassa + demi lapin">
+            <div class="dish-name"><span class="dot"></span><span>Akassa + Demi lapin</span></div>
+            <div class="price">4 500 F / 5 000 F</div>
+        </article></div>
+    </section>
+    <section id="sec-2" class="menu-section " data-section="🍗 Piron">
+      <div class="section-heading">
+        <div class="section-icon">🍗</div>
+        <div>
+          <p class="eyebrow">À LA CARTE</p>
+          <h2>Piron</h2>
+        </div>
+      </div>
+      <div class="dishes"><article class="dish" data-search="piron + poisson silivi (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Poisson Silivi (moitié)</span></div>
+            <div class="price">3 000 F</div>
+        </article>
+<article class="dish" data-search="piron + poisson silivi (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Poisson Silivi (complet)</span></div>
+            <div class="price">4 500 F</div>
+        </article>
+<article class="dish" data-search="piron + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="piron + poulet (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Poulet (moitié)</span></div>
+            <div class="price">3 500 F</div>
+        </article>
+<article class="dish" data-search="piron + poulet (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Poulet (complet)</span></div>
+            <div class="price">6 000 F</div>
+        </article>
+<article class="dish" data-search="piron + lapin complet">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Lapin complet</span></div>
+            <div class="price">8 000 F / 9 000 F</div>
+        </article>
+<article class="dish" data-search="piron + demi lapin">
+            <div class="dish-name"><span class="dot"></span><span>Piron + Demi lapin</span></div>
+            <div class="price">4 500 F / 5 000 F</div>
+        </article></div>
+    </section>
+    <section id="sec-3" class="menu-section " data-section="🍝 Pâte rouge">
+      <div class="section-heading">
+        <div class="section-icon">🍝</div>
+        <div>
+          <p class="eyebrow">À LA CARTE</p>
+          <h2>Pâte rouge</h2>
+        </div>
+      </div>
+      <div class="dishes"><article class="dish" data-search="pâte rouge + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="pâte rouge + poisson silivi (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poisson Silivi (moitié)</span></div>
+            <div class="price">3 000 F</div>
+        </article>
+<article class="dish" data-search="pâte rouge + poisson silivi (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poisson Silivi (complet)</span></div>
+            <div class="price">4 500 F</div>
+        </article>
+<article class="dish" data-search="pâte rouge + poulet (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poulet (moitié)</span></div>
+            <div class="price">3 500 F</div>
+        </article>
+<article class="dish" data-search="pâte rouge + poulet (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Poulet (complet)</span></div>
+            <div class="price">6 000 F</div>
+        </article>
+<article class="dish" data-search="pâte rouge + lapin complet">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Lapin complet</span></div>
+            <div class="price">8 000 F / 9 000 F</div>
+        </article>
+<article class="dish" data-search="pâte rouge + demi lapin">
+            <div class="dish-name"><span class="dot"></span><span>Pâte rouge + Demi lapin</span></div>
+            <div class="price">4 500 F / 5 000 F</div>
+        </article></div>
+    </section>
+    <section id="sec-4" class="menu-section " data-section="🍚 Riz">
+      <div class="section-heading">
+        <div class="section-icon">🍚</div>
+        <div>
+          <p class="eyebrow">À LA CARTE</p>
+          <h2>Riz</h2>
+        </div>
+      </div>
+      <div class="dishes"><article class="dish" data-search="riz + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="riz + poisson silivi (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Poisson Silivi (moitié)</span></div>
+            <div class="price">3 000 F</div>
+        </article>
+<article class="dish" data-search="riz + poisson silivi (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Poisson Silivi (complet)</span></div>
+            <div class="price">4 500 F</div>
+        </article>
+<article class="dish" data-search="riz + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="riz + poulet (moitié)">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Poulet (moitié)</span></div>
+            <div class="price">3 500 F</div>
+        </article>
+<article class="dish" data-search="riz + poulet (complet)">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Poulet (complet)</span></div>
+            <div class="price">6 000 F</div>
+        </article>
+<article class="dish" data-search="riz + lapin complet">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Lapin complet</span></div>
+            <div class="price">8 000 F / 9 000 F</div>
+        </article>
+<article class="dish" data-search="riz + demi lapin">
+            <div class="dish-name"><span class="dot"></span><span>Riz + Demi lapin</span></div>
+            <div class="price">4 500 F / 5 000 F</div>
+        </article></div>
+    </section>
+    <section id="sec-5" class="menu-section " data-section="🍟 Accompagnements">
+      <div class="section-heading">
+        <div class="section-icon">🍟</div>
+        <div>
+          <p class="eyebrow">À LA CARTE</p>
+          <h2>Accompagnements</h2>
+        </div>
+      </div>
+      <div class="dishes"><article class="dish" data-search="frite + aileron">
+            <div class="dish-name"><span class="dot"></span><span>Frite + Aileron</span></div>
+            <div class="price">4 000 F</div>
+        </article>
+<article class="dish" data-search="portion atiéké">
+            <div class="dish-name"><span class="dot"></span><span>Portion Atiéké</span></div>
+            <div class="price">500 F</div>
+        </article>
+<article class="dish" data-search="portion aloko">
+            <div class="dish-name"><span class="dot"></span><span>Portion Aloko</span></div>
+            <div class="price">500 F</div>
+        </article>
+<article class="dish" data-search="portion piron">
+            <div class="dish-name"><span class="dot"></span><span>Portion Piron</span></div>
+            <div class="price">1 000 F</div>
+        </article>
+<article class="dish" data-search="portion pâte rouge">
+            <div class="dish-name"><span class="dot"></span><span>Portion Pâte rouge</span></div>
+            <div class="price">1 000 F</div>
+        </article>
+<article class="dish" data-search="portion frite">
+            <div class="dish-name"><span class="dot"></span><span>Portion Frite</span></div>
+            <div class="price">1 000 F</div>
+        </article>
+<article class="dish" data-search="portion riz">
+            <div class="dish-name"><span class="dot"></span><span>Portion Riz</span></div>
+            <div class="price">1 000 F</div>
+        </article></div>
+    </section>
+    <div id="empty" class="empty">Aucun plat ne correspond à votre recherche.</div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="display:flex;align-items:center;gap:15px">
+      <img src="data:image/webp;base64,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" alt="Logo">
+      <div><h3>À très bientôt 🍽️</h3><p>Merci de choisir notre cuisine.</p></div>
+    </div>
+    <a class="top" href="#top" aria-label="Retour en haut">↑</a>
+  </div>
+</footer>
+
+<script>
+const input = document.getElementById('search');
+const sections = [...document.querySelectorAll('.menu-section')];
+const empty = document.getElementById('empty');
+
+input.addEventListener('input', () => {
+  const q = input.value.trim().toLowerCase();
+  let total = 0;
+  sections.forEach(section => {
+    let visible = 0;
+    section.querySelectorAll('.dish').forEach(dish => {
+      const ok = !q || dish.dataset.search.includes(q);
+      dish.style.display = ok ? '' : 'none';
+      if (ok) visible++;
+    });
+    section.style.display = visible ? '' : 'none';
+    total += visible;
+  });
+  empty.style.display = total ? 'none' : 'block';
+});
+
+const navLinks = [...document.querySelectorAll('.nav a[href^="#sec-"]')];
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+    }
+  });
+}, {rootMargin:'-30% 0px -60% 0px'});
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
